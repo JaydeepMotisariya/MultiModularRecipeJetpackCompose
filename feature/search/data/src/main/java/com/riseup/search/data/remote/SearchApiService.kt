@@ -1,5 +1,6 @@
 package com.riseup.search.data.remote
 
+import com.riseup.search.data.model.RecipeDetailsResponse
 import com.riseup.search.data.model.RecipeResponse
 import retrofit2.Response
 import retrofit2.http.GET
@@ -16,5 +17,5 @@ interface SearchApiService {
     @GET("api/json/v1/1/lookup.php")
     suspend fun getRecipeDetails(
         @Query("i") i: String
-    ): Response<RecipeResponse>
+    ): Response<RecipeDetailsResponse>
 }
